@@ -523,7 +523,8 @@
             const messageEl = document.getElementById("message");
 
             try {
-                const res = await fetch("https://vorx-app.site/subscribe", {
+
+                const res = await fetch("https://vorx-app.site:3000/api/subscribe", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

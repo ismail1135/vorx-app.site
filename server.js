@@ -11,7 +11,7 @@ app.use(express.json());
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-app.post("/subscribe", async(req, res) => {
+app.post("/api/subscribe", async(req, res) => {
     const { email } = req.body;
 
     try {
