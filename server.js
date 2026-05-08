@@ -10,18 +10,24 @@ app.use(express.json());
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+
+
 app.post("/subscribe", async(req, res) => {
+    console.log("ENDPOINT HIT");
     const { email } = req.body;
 
     try {
 
+        console.log("before resend");
 
         await resend.emails.send({
-            from: "onboarding@resend.dev",
+            from: "noreply@vorx-app.site",
             to: email,
-            subject: "Abonelik başarılı",
-            html: "<h1>Bültene hoş geldin 👋</h1>",
+            subject: "Test",
+            html: "<h1>Test</h1>",
         });
+
+        console.log("after resend");
 
         res.json({
             message: "Abonelik başarılı",
