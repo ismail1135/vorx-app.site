@@ -1,7 +1,9 @@
 import express from "express";
 import { Resend } from "resend";
 import dotenv from "dotenv";
+import cors from "cors";
 
+app.use(cors());
 dotenv.config();
 
 const app = express();
@@ -13,10 +15,6 @@ app.post("/subscribe", async(req, res) => {
     const { email } = req.body;
 
     try {
-        // Log ekranındaki 401 hatasını önlemek için:
-        // 1. Resend dashboard'dan Full Access bir key aldığından emin ol.
-        // 2. Eğer domain (vorx-app.site) doğrulanmadıysa "from" kısmını 
-        //    "onboarding@resend.dev" yaparak test et.
         await resend.emails.send({
             from: "noreply@vorx-app.site",
             to: email,
