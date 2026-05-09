@@ -3,10 +3,10 @@ import { Resend } from "resend";
 import dotenv from "dotenv";
 import cors from "cors";
 
+const app = express();
 app.use(cors());
 dotenv.config();
 
-const app = express();
 app.use(express.json());
 
 const resend = new Resend(process.env.RESEND_API_KEY);
