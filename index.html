@@ -495,16 +495,23 @@ fill="var(--logoColor)"/>
                 <div class="cd-lbl">Saniye</div>
             </div>
         </div>
+        <picture>
+            <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.webp" type="image/webp">
+            <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.gif" alt="🚀" ">
+            </picture>
+            <!-- dusts -->
+
+        </div>
     </main>
 
-    <form id="newsletter-form" class="cta">
+    <form id="newsletter-form " class="cta ">
         <h2>İlk siz öğrenin</h2>
         <p>Gelişmelerden haberdar olmak için e-posta adresinizi bırakın.</p>
-        <span id="message"></span>
+        <span id="message "></span>
         <br>
-        <div class="email-form">
-            <input type="email" id="email" placeholder="E-posta adresiniz" required>
-            <button type="submit">Bildir</button>
+        <div class="email-form ">
+            <input type="email " id="email " placeholder="E-posta adresiniz " required>
+            <button type="submit ">Bildir</button>
         </div>
     </form>
 
@@ -525,18 +532,18 @@ fill="var(--logoColor)"/>
         tick();
 
         // Form Gönderme
-        const form = document.getElementById("newsletter-form");
-        form.addEventListener("submit", async(e) => {
+        const form = document.getElementById("newsletter-form ");
+        form.addEventListener("submit ", async(e) => {
             e.preventDefault();
-            const email = document.getElementById("email").value;
-            const messageEl = document.getElementById("message");
+            const email = document.getElementById("email ").value;
+            const messageEl = document.getElementById("message ");
 
             try {
 
-                const res = await fetch("https://vorx-app-site-1.onrender.com/api/subscribe", {
-                    method: "POST",
+                const res = await fetch("https://vorx-app-site-1.onrender.com/api/subscribe ", {
+                    method: "POST ",
                     headers: {
-                        "Content-Type": "application/json"
+                        "Content-Type ": "application/json "
                     },
                     body: JSON.stringify({
                         email
@@ -545,10 +552,10 @@ fill="var(--logoColor)"/>
                 const data = await res.json();
                 messageEl.innerText = data.message;
                 setTimeout(() => {
-                    messageEl.innerText = "";
+                    messageEl.innerText = " ";
                 }, 5000);
             } catch (err) {
-                messageEl.innerText = "Hata oluştu.";
+                messageEl.innerText = "Hata oluştu. ";
             }
         });
     </script>
