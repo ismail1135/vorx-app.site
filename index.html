@@ -22,8 +22,8 @@
             margin: 0;
             padding: 0
         }
-
-        :root {
+        
+         :root {
             --bg: #ffffff;
             --card: #f5f5f7;
             --text: #1c1c1e;
@@ -33,9 +33,9 @@
             --blueLight: #e8f4ff;
             --logoColor: #0088FF;
         }
-
+        
         @media(prefers-color-scheme:dark) {
-            :root {
+             :root {
                 --bg: #111111;
                 --card: #111113;
                 --text: #f2f2f7;
@@ -45,7 +45,7 @@
                 --logoColor: #0088FF;
             }
         }
-
+        
         body {
             background: var(--bg);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -55,7 +55,7 @@
             flex-direction: column;
             overflow-x: hidden;
         }
-
+        
         nav {
             position: sticky;
             top: 0;
@@ -69,14 +69,14 @@
             backdrop-filter: blur(18px);
             border-bottom: 1px solid color-mix(in srgb, var(--sub) 14%, transparent);
         }
-
+        
         .nav-logo {
             font-size: 1.15rem;
             font-weight: 700;
             letter-spacing: -0.5px;
             color: var(--accent)
         }
-
+        
         .nav-badge {
             font-size: .68rem;
             font-weight: 600;
@@ -91,7 +91,7 @@
             gap: 8px;
             cursor: pointer;
         }
-
+        
         .hero {
             flex: 1;
             display: flex;
@@ -102,7 +102,7 @@
             padding: clamp(60px, 10vh, 110px) clamp(20px, 6vw, 80px) clamp(48px, 8vh, 80px);
             position: relative;
         }
-
+        
         .hero::before {
             content: '';
             position: absolute;
@@ -110,14 +110,14 @@
             background: radial-gradient(ellipse 70% 50% at 50% 30%, color-mix(in srgb, var(--blue) 10%, transparent), transparent 70%);
             pointer-events: none;
         }
-
+        
         .vorx-logo {
             height: 9em;
             margin-bottom: 32px;
             position: relative;
             color: #000;
         }
-
+        
         .eyebrow {
             display: inline-flex;
             align-items: center;
@@ -130,7 +130,7 @@
             margin-bottom: 24px;
             position: relative;
         }
-
+        
         .eyebrow::before,
         .eyebrow::after {
             content: '';
@@ -139,7 +139,7 @@
             background: var(--blue);
             opacity: .5
         }
-
+        
         .hero-title {
             font-size: clamp(3.2rem, 11vw, 7.5rem);
             font-weight: 800;
@@ -149,11 +149,11 @@
             margin-bottom: 18px;
             position: relative;
         }
-
+        
         .hero-title span {
             color: var(--blue)
         }
-
+        
         .hero-sub {
             font-size: clamp(.95rem, 2.2vw, 1.15rem);
             color: var(--sub);
@@ -162,21 +162,21 @@
             margin-bottom: 48px;
             position: relative;
         }
-
+        
         .countdown {
             display: flex;
             gap: clamp(8px, 2.5vw, 22px);
             margin-bottom: 52px;
             position: relative
         }
-
+        
         .cd-block {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 6px
         }
-
+        
         .cd-val {
             font-size: clamp(1.7rem, 4.5vw, 2.8rem);
             font-weight: 700;
@@ -192,7 +192,7 @@
             justify-content: center;
             font-variant-numeric: tabular-nums;
         }
-
+        
         .cd-lbl {
             font-size: .62rem;
             font-weight: 600;
@@ -200,7 +200,7 @@
             text-transform: uppercase;
             color: var(--sub)
         }
-
+        
         .cd-sep {
             font-size: clamp(1.5rem, 3.5vw, 2.4rem);
             font-weight: 300;
@@ -209,7 +209,7 @@
             margin-bottom: 20px;
             opacity: .4
         }
-
+        
         .rocket img {
             height: 15em;
             animation: float 3s ease-in-out infinite;
@@ -217,19 +217,17 @@
             position: relative;
             margin: 10vh 0 -1% 0;
         }
-
+        
         @keyframes float {
-
             0%,
             100% {
                 transform: translateY(0) rotate(-45deg)
             }
-
             50% {
                 transform: translateY(-50px) rotate(-45deg)
             }
         }
-
+        
         .cta {
             background: var(--blue);
             padding: clamp(44px, 7vh, 72px) clamp(20px, 6vw, 80px);
@@ -240,7 +238,7 @@
             position: relative;
             overflow: hidden;
         }
-
+        
         .cta::before {
             content: '';
             position: absolute;
@@ -248,11 +246,11 @@
             background: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25' cy='25' r='1.5' fill='%23ffffff' fill-opacity='0.08'/%3E%3C/svg%3E");
             pointer-events: none;
         }
-
+        
         .cta>* {
             position: relative
         }
-
+        
         .cta h2 {
             font-size: clamp(1.4rem, 3.5vw, 2rem);
             font-weight: 700;
@@ -260,7 +258,7 @@
             letter-spacing: -0.02em;
             margin-bottom: 10px
         }
-
+        
         .cta p {
             font-size: clamp(.85rem, 1.8vw, .97rem);
             color: rgba(255, 255, 255, .73);
@@ -268,7 +266,7 @@
             line-height: 1.65;
             margin-bottom: 28px
         }
-
+        
         .email-form {
             display: flex;
             width: 100%;
@@ -279,7 +277,7 @@
             overflow: hidden;
             transition: border-color .2s, box-shadow .2s;
         }
-
+        
         .email-form input {
             flex: 1;
             padding: 13px 16px;
@@ -291,11 +289,11 @@
             font-family: inherit;
             min-width: 0;
         }
-
+        
         .email-form input::placeholder {
             color: rgba(255, 255, 255, .5)
         }
-
+        
         .email-form button {
             padding: 13px 20px;
             border: none;
@@ -309,17 +307,17 @@
             transition: background .2s;
             border-left: 1px solid rgba(255, 255, 255, .14);
         }
-
+        
         .email-form button:hover {
             background: rgba(255, 255, 255, .28)
         }
-
+        
         .cta-note {
             margin-top: 14px;
             font-size: .73rem;
             color: rgba(255, 255, 255, .48)
         }
-
+        
         .footer-bar {
             padding: 16px clamp(20px, 5vw, 60px);
             display: flex;
@@ -329,33 +327,30 @@
             gap: 8px;
             border-top: 1px solid color-mix(in srgb, var(--sub) 13%, transparent);
         }
-
+        
         .footer-bar span {
             font-size: .75rem;
             color: var(--sub)
         }
-
+        
         @media(max-width:440px) {
             .cd-sep {
                 display: none
             }
-
             .email-form {
                 flex-direction: column
             }
-
             .email-form button {
                 border-left: none;
                 border-top: 1px solid rgba(255, 255, 255, .14);
                 padding: 13px
             }
-
             .footer-bar {
                 justify-content: center;
                 text-align: center
             }
         }
-
+        
         .dust {
             z-index: -1;
             position: relative;
@@ -364,7 +359,7 @@
             margin: -40% -25%;
             pointer-events: none;
         }
-
+        
         .dust .order-1 {
             animation: dust1 1s ease-in-out infinite;
             position: absolute;
@@ -376,7 +371,7 @@
             z-index: 999;
             scale: 1.4;
         }
-
+        
         .dust .order-1a {
             animation: dust1a 1s ease-in-out infinite;
             animation-delay: 0.2s;
@@ -389,7 +384,7 @@
             z-index: 999;
             scale: 1.4;
         }
-
+        
         .dust .order-2 {
             animation: dust2 1.2s ease-in-out infinite;
             position: absolute;
@@ -401,7 +396,7 @@
             scale: 1.4;
             z-index: 998;
         }
-
+        
         .dust .order-3 {
             animation: dust3 1s ease-in-out infinite;
             position: absolute;
@@ -410,7 +405,7 @@
             scale: 1.4;
             z-index: 997;
         }
-
+        
         .dust .order-4 {
             animation: dust4 1s ease-in-out infinite;
             position: absolute;
@@ -419,50 +414,42 @@
             transform: translateX(-50%);
             z-index: 996;
         }
-
+        
         @keyframes dust1 {
-
             0%,
             100% {
                 transform: translateX(-50%) translateY(0)
             }
-
             50% {
                 transform: translateX(-50%) translateY(-5px)
             }
         }
-
+        
         @keyframes dust1a {
-
             0%,
             100% {
                 transform: translateX(-50%) translateY(0)
             }
-
             50% {
                 transform: translateX(-50%) translateY(-5px)
             }
         }
-
+        
         @keyframes dust2 {
-
             0%,
             100% {
                 transform: translateX(-50%) translateY(0);
             }
-
             50% {
                 transform: translateX(-50%) translateY(-5px);
             }
         }
-
+        
         @keyframes dust3 {
-
             0%,
             100% {
                 transform: translateX(-50%) translateY(0) scale(1.4);
             }
-
             50% {
                 transform: translateX(-50%) translateY(-5px) scale(1.42);
             }
@@ -473,10 +460,8 @@
 <body>
     <nav>
         <div class="nav-logo">Vorx</div>
-        <div class="nav-badge">Yakında <img width="24" height="24"
-                src="https://img.icons8.com/fluency/96/google-play-store-new.png" alt="store" /></div>
+        <div class="nav-badge">Yakında <img width="24" height="24" src="https://img.icons8.com/fluency/96/google-play-store-new.png" alt="store" /></div>
     </nav>
-
 
     <main class="hero">
         <svg width="200" height="200" viewBox="0 0 2200 1305" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -512,66 +497,64 @@
         </div>
         <picture class="rocket">
             <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.webp" type="image/webp">
-            <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.gif" alt="🚀" ">
-            </picture>
-            <!-- dusts -->
-
-        </div>
+            <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.gif" alt="🚀">
+        </picture>
     </main>
 
-    <form id=" newsletter-form " class=" cta">
-            <h2>İlk siz öğrenin</h2>
-            <p>Gelişmelerden haberdar olmak için e-posta adresinizi bırakın.</p>
-            <span id="message"></span>
-            <br>
-            <div class=" email-form ">
-                <input type="email" id="email" placeholder="E-posta adresiniz" required>
-                <button type="submit">Bildir</button>
-            </div>
-            </form>
+    <form id="newsletter-form" class="cta">
+        <h2>İlk siz öğrenin</h2>
+        <p>Gelişmelerden haberdar olmak için e-posta adresinizi bırakın.</p>
+        <span id="message"></span>
+        <br>
+        <div class="email-form">
+            <input type="email" id="email" placeholder="E-posta adresiniz" required>
+            <button type="submit">Bildir</button>
+        </div>
+    </form>
 
-            <script>
-                // Sayaç kodları
-                const launch = new Date('2026-05-30T12:00:00Z');
-                const p = n => String(n).padStart(2, '0');
+    <script>
+        // Sayaç kodları
+        const launch = new Date('2026-05-30T12:00:00Z');
+        const p = n => String(n).padStart(2, '0');
 
-                function tick() {
-                    const diff = launch - Date.now();
-                    if (diff <= 0) return;
-                    document.getElementById('d').textContent = p(Math.floor(diff / 86400000));
-                    document.getElementById('h').textContent = p(Math.floor((diff % 86400000) / 3600000));
-                    document.getElementById('m').textContent = p(Math.floor((diff % 3600000) / 60000));
-                    document.getElementById('s').textContent = p(Math.floor((diff % 60000) / 1000));
-                }
-                setInterval(tick, 1000);
-                tick();
+        function tick() {
+            const diff = launch - Date.now();
+            if (diff <= 0) return;
+            document.getElementById('d').textContent = p(Math.floor(diff / 86400000));
+            document.getElementById('h').textContent = p(Math.floor((diff % 86400000) / 3600000));
+            document.getElementById('m').textContent = p(Math.floor((diff % 3600000) / 60000));
+            document.getElementById('s').textContent = p(Math.floor((diff % 60000) / 1000));
+        }
+        setInterval(tick, 1000);
+        tick();
 
-                // Form Gönderme
-                const form = document.getElementById("newsletter-form");
-                form.addEventListener("submit", async (e) => {
-                    e.preventDefault();
-                    const email = document.getElementById("email").value;
-                    const messageEl = document.getElementById("message");
+        // Form Gönderme
+        const form = document.getElementById("newsletter-form");
+        form.addEventListener("submit", async(e) => {
+            e.preventDefault();
+            const emailInput = document.getElementById("email");
+            const messageEl = document.getElementById("message");
+            const email = emailInput.value.trim();
 
-                    try {
+            messageEl.innerText = "Gönderiliyor...";
 
-                        const res = await fetch("https://vorx-app-site-1.onrender.com/api/subscribe", {
-                            method: "POST",
-                            headers: {
-                                "Content-Type": "application/json"
-                            },
-                            body: JSON.stringify({
-                                email
-                            }),
-                        });
-                        const data = await res.json();
-                        messageEl.innerText = data.message;
-                    } catch (err) {
-                        messageEl.innerText = "Hata oluştu.";
-                    }
+            try {
+                const res = await fetch("https://vorx-app-site-1.onrender.com/api/subscribe", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        email
+                    }),
                 });
-            </script>
+                const data = await res.json();
+                messageEl.innerText = data.message;
+            } catch (err) {
+                messageEl.innerText = "Hata oluştu.";
+            }
+        });
+    </script>
 </body>
-
 
 </html>
