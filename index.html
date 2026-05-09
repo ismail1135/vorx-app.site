@@ -22,8 +22,8 @@
             margin: 0;
             padding: 0
         }
-        
-         :root {
+
+        :root {
             --bg: #ffffff;
             --card: #f5f5f7;
             --text: #1c1c1e;
@@ -33,9 +33,9 @@
             --blueLight: #e8f4ff;
             --logoColor: #0088FF;
         }
-        
+
         @media(prefers-color-scheme:dark) {
-             :root {
+            :root {
                 --bg: #111111;
                 --card: #111113;
                 --text: #f2f2f7;
@@ -45,7 +45,7 @@
                 --logoColor: #0088FF;
             }
         }
-        
+
         body {
             background: var(--bg);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -55,7 +55,7 @@
             flex-direction: column;
             overflow-x: hidden;
         }
-        
+
         nav {
             position: sticky;
             top: 0;
@@ -69,14 +69,14 @@
             backdrop-filter: blur(18px);
             border-bottom: 1px solid color-mix(in srgb, var(--sub) 14%, transparent);
         }
-        
+
         .nav-logo {
             font-size: 1.15rem;
             font-weight: 700;
             letter-spacing: -0.5px;
             color: var(--accent)
         }
-        
+
         .nav-badge {
             font-size: .68rem;
             font-weight: 600;
@@ -91,7 +91,7 @@
             gap: 8px;
             cursor: pointer;
         }
-        
+
         .hero {
             flex: 1;
             display: flex;
@@ -102,7 +102,7 @@
             padding: clamp(60px, 10vh, 110px) clamp(20px, 6vw, 80px) clamp(48px, 8vh, 80px);
             position: relative;
         }
-        
+
         .hero::before {
             content: '';
             position: absolute;
@@ -110,14 +110,14 @@
             background: radial-gradient(ellipse 70% 50% at 50% 30%, color-mix(in srgb, var(--blue) 10%, transparent), transparent 70%);
             pointer-events: none;
         }
-        
+
         .vorx-logo {
             height: 9em;
             margin-bottom: 32px;
             position: relative;
             color: #000;
         }
-        
+
         .eyebrow {
             display: inline-flex;
             align-items: center;
@@ -130,7 +130,7 @@
             margin-bottom: 24px;
             position: relative;
         }
-        
+
         .eyebrow::before,
         .eyebrow::after {
             content: '';
@@ -139,7 +139,7 @@
             background: var(--blue);
             opacity: .5
         }
-        
+
         .hero-title {
             font-size: clamp(3.2rem, 11vw, 7.5rem);
             font-weight: 800;
@@ -149,11 +149,11 @@
             margin-bottom: 18px;
             position: relative;
         }
-        
+
         .hero-title span {
             color: var(--blue)
         }
-        
+
         .hero-sub {
             font-size: clamp(.95rem, 2.2vw, 1.15rem);
             color: var(--sub);
@@ -162,21 +162,21 @@
             margin-bottom: 48px;
             position: relative;
         }
-        
+
         .countdown {
             display: flex;
             gap: clamp(8px, 2.5vw, 22px);
             margin-bottom: 52px;
             position: relative
         }
-        
+
         .cd-block {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 6px
         }
-        
+
         .cd-val {
             font-size: clamp(1.7rem, 4.5vw, 2.8rem);
             font-weight: 700;
@@ -192,7 +192,7 @@
             justify-content: center;
             font-variant-numeric: tabular-nums;
         }
-        
+
         .cd-lbl {
             font-size: .62rem;
             font-weight: 600;
@@ -200,7 +200,7 @@
             text-transform: uppercase;
             color: var(--sub)
         }
-        
+
         .cd-sep {
             font-size: clamp(1.5rem, 3.5vw, 2.4rem);
             font-weight: 300;
@@ -209,7 +209,7 @@
             margin-bottom: 20px;
             opacity: .4
         }
-        
+
         .rocket img {
             height: 15em;
             animation: float 3s ease-in-out infinite;
@@ -217,17 +217,19 @@
             position: relative;
             margin: 10vh 0 -1% 0;
         }
-        
+
         @keyframes float {
+
             0%,
             100% {
                 transform: translateY(0) rotate(-45deg)
             }
+
             50% {
                 transform: translateY(-50px) rotate(-45deg)
             }
         }
-        
+
         .cta {
             background: var(--blue);
             padding: clamp(44px, 7vh, 72px) clamp(20px, 6vw, 80px);
@@ -238,7 +240,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .cta::before {
             content: '';
             position: absolute;
@@ -246,11 +248,11 @@
             background: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25' cy='25' r='1.5' fill='%23ffffff' fill-opacity='0.08'/%3E%3C/svg%3E");
             pointer-events: none;
         }
-        
+
         .cta>* {
             position: relative
         }
-        
+
         .cta h2 {
             font-size: clamp(1.4rem, 3.5vw, 2rem);
             font-weight: 700;
@@ -258,7 +260,7 @@
             letter-spacing: -0.02em;
             margin-bottom: 10px
         }
-        
+
         .cta p {
             font-size: clamp(.85rem, 1.8vw, .97rem);
             color: rgba(255, 255, 255, .73);
@@ -266,7 +268,7 @@
             line-height: 1.65;
             margin-bottom: 28px
         }
-        
+
         .email-form {
             display: flex;
             width: 100%;
@@ -277,7 +279,7 @@
             overflow: hidden;
             transition: border-color .2s, box-shadow .2s;
         }
-        
+
         .email-form input {
             flex: 1;
             padding: 13px 16px;
@@ -289,11 +291,11 @@
             font-family: inherit;
             min-width: 0;
         }
-        
+
         .email-form input::placeholder {
             color: rgba(255, 255, 255, .5)
         }
-        
+
         .email-form button {
             padding: 13px 20px;
             border: none;
@@ -307,17 +309,17 @@
             transition: background .2s;
             border-left: 1px solid rgba(255, 255, 255, .14);
         }
-        
+
         .email-form button:hover {
             background: rgba(255, 255, 255, .28)
         }
-        
+
         .cta-note {
             margin-top: 14px;
             font-size: .73rem;
             color: rgba(255, 255, 255, .48)
         }
-        
+
         .footer-bar {
             padding: 16px clamp(20px, 5vw, 60px);
             display: flex;
@@ -327,30 +329,33 @@
             gap: 8px;
             border-top: 1px solid color-mix(in srgb, var(--sub) 13%, transparent);
         }
-        
+
         .footer-bar span {
             font-size: .75rem;
             color: var(--sub)
         }
-        
+
         @media(max-width:440px) {
             .cd-sep {
                 display: none
             }
+
             .email-form {
                 flex-direction: column
             }
+
             .email-form button {
                 border-left: none;
                 border-top: 1px solid rgba(255, 255, 255, .14);
                 padding: 13px
             }
+
             .footer-bar {
                 justify-content: center;
                 text-align: center
             }
         }
-        
+
         .dust {
             z-index: -1;
             position: relative;
@@ -359,7 +364,7 @@
             margin: -40% -25%;
             pointer-events: none;
         }
-        
+
         .dust .order-1 {
             animation: dust1 1s ease-in-out infinite;
             position: absolute;
@@ -371,7 +376,7 @@
             z-index: 999;
             scale: 1.4;
         }
-        
+
         .dust .order-1a {
             animation: dust1a 1s ease-in-out infinite;
             animation-delay: 0.2s;
@@ -384,7 +389,7 @@
             z-index: 999;
             scale: 1.4;
         }
-        
+
         .dust .order-2 {
             animation: dust2 1.2s ease-in-out infinite;
             position: absolute;
@@ -396,7 +401,7 @@
             scale: 1.4;
             z-index: 998;
         }
-        
+
         .dust .order-3 {
             animation: dust3 1s ease-in-out infinite;
             position: absolute;
@@ -405,7 +410,7 @@
             scale: 1.4;
             z-index: 997;
         }
-        
+
         .dust .order-4 {
             animation: dust4 1s ease-in-out infinite;
             position: absolute;
@@ -414,42 +419,50 @@
             transform: translateX(-50%);
             z-index: 996;
         }
-        
+
         @keyframes dust1 {
+
             0%,
             100% {
                 transform: translateX(-50%) translateY(0)
             }
+
             50% {
                 transform: translateX(-50%) translateY(-5px)
             }
         }
-        
+
         @keyframes dust1a {
+
             0%,
             100% {
                 transform: translateX(-50%) translateY(0)
             }
+
             50% {
                 transform: translateX(-50%) translateY(-5px)
             }
         }
-        
+
         @keyframes dust2 {
+
             0%,
             100% {
                 transform: translateX(-50%) translateY(0);
             }
+
             50% {
                 transform: translateX(-50%) translateY(-5px);
             }
         }
-        
+
         @keyframes dust3 {
+
             0%,
             100% {
                 transform: translateX(-50%) translateY(0) scale(1.4);
             }
+
             50% {
                 transform: translateX(-50%) translateY(-5px) scale(1.42);
             }
@@ -460,19 +473,21 @@
 <body>
     <nav>
         <div class="nav-logo">Vorx</div>
-        <div class="nav-badge">Yakında <img width="24" height="24" src="https://img.icons8.com/fluency/96/google-play-store-new.png" alt="store" /></div>
+        <div class="nav-badge">Yakında <img width="24" height="24"
+                src="https://img.icons8.com/fluency/96/google-play-store-new.png" alt="store" /></div>
     </nav>
 
 
     <main class="hero">
         <svg width="200" height="200" viewBox="0 0 2200 1305" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M1909.55 18.6772C1937.19 -7.83591 1981.39 -5.87375 2006.57 22.985L2061.06 17.6691C2083.33 15.498 2104.16 28.9424 2111.35 50.1219C2116.29 64.6991 2127.91 76.033 2142.61 80.616L2147.89 82.2624C2180.21 92.3374 2197.44 127.461 2185.64 159.177L2171.27 197.796C2210.92 227.525 2209.25 287.516 2168.01 315L2120.06 346.962C2104.8 357.136 2092.25 370.887 2083.51 387.015L2076.87 399.277C2070.63 410.78 2063.08 421.52 2054.37 431.28L1546.27 1079.27V1305H1385.39C1411.14 1260.11 1425.87 1208.08 1425.87 1152.62C1425.87 983.199 1288.5 845.857 1119.04 845.857C949.578 845.858 812.206 983.199 812.206 1152.62C812.206 1208.08 826.932 1260.11 852.684 1305H724.012V1032.24L147.686 432.309C137.618 421.878 129.012 410.128 122.107 397.383L116.492 387.015C107.753 370.887 95.2036 357.136 79.9385 346.962L31.9868 315C-9.24933 287.516 -10.9155 227.525 28.7323 197.796L14.3591 159.18C2.55519 127.462 19.7941 92.3372 52.1087 82.2624L57.3866 80.616C72.0855 76.0328 83.7067 64.6991 88.6548 50.1219C95.8439 28.9424 116.675 15.4997 138.94 17.6714L193.428 22.985C218.609 -5.87383 262.807 -7.83615 290.448 18.6772L317.463 44.5903C321.253 48.226 324.759 52.1481 327.95 56.3195L411.145 165.09L665.169 376.774L646.71 267.386L747.531 311.065C750.519 308.935 752.368 307.922 752.416 307.896C752.684 307.782 945.059 225.789 1112.27 225.562C1237.29 225.392 1381.29 269.566 1449.53 293.271L1615.59 233.114L1594.7 326.877L1788.86 165.088L1872.05 56.3195C1875.24 52.1477 1878.75 48.2263 1882.54 44.5903L1909.55 18.6772ZM989.295 435.677C1074.57 516.26 1155.85 500.031 1184.21 492.943L1180.21 476.975C1154.42 483.421 1080.02 498.765 1000.6 423.714L989.295 435.677ZM913.729 268.421C880.088 268.422 852.815 295.688 852.815 329.322C852.815 362.956 880.088 390.225 913.729 390.225C947.371 390.225 974.646 362.956 974.646 329.322C974.646 295.688 947.372 268.421 913.729 268.421ZM1285.99 268.421C1252.35 268.421 1225.08 295.688 1225.08 329.322C1225.08 362.956 1252.35 390.225 1285.99 390.225C1319.63 390.225 1346.9 362.956 1346.91 329.322C1346.91 295.688 1319.63 268.421 1285.99 268.421ZM242.416 160.58C222.66 162.776 201.087 145.964 165.996 176.757C137.501 201.763 144.417 232.108 146.322 253.312C147.574 310.562 138.265 338.081 162.783 368.209C167.775 374.343 174.12 379.369 181.347 382.583C216.168 398.069 243.7 379.78 264.947 347.403C279.396 325.385 297.593 305.717 321.73 295.177C364.051 276.697 394.142 257.137 366.071 205.656C334.443 160.586 295.831 176.728 242.416 160.58ZM2034 176.757C1998.91 145.964 1977.34 162.775 1957.58 160.58C1904.17 176.728 1865.56 160.586 1833.93 205.656C1805.86 257.138 1835.95 276.697 1878.27 295.177C1902.41 305.717 1920.6 325.383 1935.05 347.4C1956.3 379.778 1983.83 398.069 2018.65 382.583C2025.88 379.369 2032.23 374.343 2037.22 368.209C2061.74 338.081 2052.43 310.56 2053.68 253.31C2055.58 232.106 2062.5 201.763 2034 176.757ZM1088.47 325.937C1075.8 325.938 1067.88 339.654 1074.22 350.627L1086.73 372.301C1093.07 383.272 1108.91 383.272 1115.24 372.301L1127.76 350.627C1134.1 339.654 1126.18 325.937 1113.5 325.937H1088.47ZM95.1753 240.313C72.9373 220.121 42.1205 217.825 26.3459 235.185C10.5718 252.547 15.8123 282.991 38.0502 303.184C60.2884 323.376 91.1029 325.67 106.877 308.309C122.651 290.948 117.412 260.505 95.1753 240.313ZM2173.65 235.185C2157.88 217.824 2127.06 220.119 2104.83 240.311C2082.59 260.503 2077.35 290.948 2093.12 308.309C2108.9 325.67 2139.71 323.376 2161.95 303.184C2184.19 282.991 2189.43 252.547 2173.65 235.185ZM107.784 121.425C83.9854 99.8159 51.0069 97.3602 34.1251 115.939C17.2434 134.519 22.8523 167.101 46.6516 188.712C70.4511 210.321 103.429 212.777 120.311 194.197C137.192 175.617 131.583 143.035 107.784 121.425ZM2165.88 115.939C2148.99 97.3593 2116.02 99.8158 2092.22 121.425C2068.42 143.035 2062.81 175.617 2079.69 194.197C2096.57 212.777 2129.55 210.321 2153.35 188.712C2177.15 167.101 2182.76 134.519 2165.88 115.939ZM196.033 57.9567C177.791 31.4894 146.244 21.58 125.571 35.8232C104.897 50.0674 102.927 83.0714 121.168 109.54C139.409 136.007 170.957 145.917 191.63 131.673C212.302 117.428 214.274 84.4244 196.033 57.9567ZM2074.43 35.8232C2053.76 21.5791 2022.21 31.4891 2003.97 57.9567C1985.73 84.4248 1987.7 117.429 2008.37 131.673C2029.04 145.917 2060.59 136.007 2078.83 109.54C2097.07 83.0717 2095.1 50.0676 2074.43 35.8232ZM313.092 60.4918C295.651 35.4002 265.623 26.0994 246.024 39.7177C226.426 53.3368 224.677 84.7186 242.117 109.81C259.559 134.902 289.587 144.203 309.185 130.585C328.783 116.965 330.532 85.5833 313.092 60.4918ZM1953.98 39.7154C1934.38 26.0967 1904.35 35.3982 1886.91 60.4895C1869.47 85.5816 1871.22 116.966 1890.82 130.585C1910.41 144.203 1940.44 134.902 1957.88 109.81C1975.32 84.7186 1973.57 53.3345 1953.98 39.7154Z"
-fill="var(--logoColor)"/>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M1909.55 18.6772C1937.19 -7.83591 1981.39 -5.87375 2006.57 22.985L2061.06 17.6691C2083.33 15.498 2104.16 28.9424 2111.35 50.1219C2116.29 64.6991 2127.91 76.033 2142.61 80.616L2147.89 82.2624C2180.21 92.3374 2197.44 127.461 2185.64 159.177L2171.27 197.796C2210.92 227.525 2209.25 287.516 2168.01 315L2120.06 346.962C2104.8 357.136 2092.25 370.887 2083.51 387.015L2076.87 399.277C2070.63 410.78 2063.08 421.52 2054.37 431.28L1546.27 1079.27V1305H1385.39C1411.14 1260.11 1425.87 1208.08 1425.87 1152.62C1425.87 983.199 1288.5 845.857 1119.04 845.857C949.578 845.858 812.206 983.199 812.206 1152.62C812.206 1208.08 826.932 1260.11 852.684 1305H724.012V1032.24L147.686 432.309C137.618 421.878 129.012 410.128 122.107 397.383L116.492 387.015C107.753 370.887 95.2036 357.136 79.9385 346.962L31.9868 315C-9.24933 287.516 -10.9155 227.525 28.7323 197.796L14.3591 159.18C2.55519 127.462 19.7941 92.3372 52.1087 82.2624L57.3866 80.616C72.0855 76.0328 83.7067 64.6991 88.6548 50.1219C95.8439 28.9424 116.675 15.4997 138.94 17.6714L193.428 22.985C218.609 -5.87383 262.807 -7.83615 290.448 18.6772L317.463 44.5903C321.253 48.226 324.759 52.1481 327.95 56.3195L411.145 165.09L665.169 376.774L646.71 267.386L747.531 311.065C750.519 308.935 752.368 307.922 752.416 307.896C752.684 307.782 945.059 225.789 1112.27 225.562C1237.29 225.392 1381.29 269.566 1449.53 293.271L1615.59 233.114L1594.7 326.877L1788.86 165.088L1872.05 56.3195C1875.24 52.1477 1878.75 48.2263 1882.54 44.5903L1909.55 18.6772ZM989.295 435.677C1074.57 516.26 1155.85 500.031 1184.21 492.943L1180.21 476.975C1154.42 483.421 1080.02 498.765 1000.6 423.714L989.295 435.677ZM913.729 268.421C880.088 268.422 852.815 295.688 852.815 329.322C852.815 362.956 880.088 390.225 913.729 390.225C947.371 390.225 974.646 362.956 974.646 329.322C974.646 295.688 947.372 268.421 913.729 268.421ZM1285.99 268.421C1252.35 268.421 1225.08 295.688 1225.08 329.322C1225.08 362.956 1252.35 390.225 1285.99 390.225C1319.63 390.225 1346.9 362.956 1346.91 329.322C1346.91 295.688 1319.63 268.421 1285.99 268.421ZM242.416 160.58C222.66 162.776 201.087 145.964 165.996 176.757C137.501 201.763 144.417 232.108 146.322 253.312C147.574 310.562 138.265 338.081 162.783 368.209C167.775 374.343 174.12 379.369 181.347 382.583C216.168 398.069 243.7 379.78 264.947 347.403C279.396 325.385 297.593 305.717 321.73 295.177C364.051 276.697 394.142 257.137 366.071 205.656C334.443 160.586 295.831 176.728 242.416 160.58ZM2034 176.757C1998.91 145.964 1977.34 162.775 1957.58 160.58C1904.17 176.728 1865.56 160.586 1833.93 205.656C1805.86 257.138 1835.95 276.697 1878.27 295.177C1902.41 305.717 1920.6 325.383 1935.05 347.4C1956.3 379.778 1983.83 398.069 2018.65 382.583C2025.88 379.369 2032.23 374.343 2037.22 368.209C2061.74 338.081 2052.43 310.56 2053.68 253.31C2055.58 232.106 2062.5 201.763 2034 176.757ZM1088.47 325.937C1075.8 325.938 1067.88 339.654 1074.22 350.627L1086.73 372.301C1093.07 383.272 1108.91 383.272 1115.24 372.301L1127.76 350.627C1134.1 339.654 1126.18 325.937 1113.5 325.937H1088.47ZM95.1753 240.313C72.9373 220.121 42.1205 217.825 26.3459 235.185C10.5718 252.547 15.8123 282.991 38.0502 303.184C60.2884 323.376 91.1029 325.67 106.877 308.309C122.651 290.948 117.412 260.505 95.1753 240.313ZM2173.65 235.185C2157.88 217.824 2127.06 220.119 2104.83 240.311C2082.59 260.503 2077.35 290.948 2093.12 308.309C2108.9 325.67 2139.71 323.376 2161.95 303.184C2184.19 282.991 2189.43 252.547 2173.65 235.185ZM107.784 121.425C83.9854 99.8159 51.0069 97.3602 34.1251 115.939C17.2434 134.519 22.8523 167.101 46.6516 188.712C70.4511 210.321 103.429 212.777 120.311 194.197C137.192 175.617 131.583 143.035 107.784 121.425ZM2165.88 115.939C2148.99 97.3593 2116.02 99.8158 2092.22 121.425C2068.42 143.035 2062.81 175.617 2079.69 194.197C2096.57 212.777 2129.55 210.321 2153.35 188.712C2177.15 167.101 2182.76 134.519 2165.88 115.939ZM196.033 57.9567C177.791 31.4894 146.244 21.58 125.571 35.8232C104.897 50.0674 102.927 83.0714 121.168 109.54C139.409 136.007 170.957 145.917 191.63 131.673C212.302 117.428 214.274 84.4244 196.033 57.9567ZM2074.43 35.8232C2053.76 21.5791 2022.21 31.4891 2003.97 57.9567C1985.73 84.4248 1987.7 117.429 2008.37 131.673C2029.04 145.917 2060.59 136.007 2078.83 109.54C2097.07 83.0717 2095.1 50.0676 2074.43 35.8232ZM313.092 60.4918C295.651 35.4002 265.623 26.0994 246.024 39.7177C226.426 53.3368 224.677 84.7186 242.117 109.81C259.559 134.902 289.587 144.203 309.185 130.585C328.783 116.965 330.532 85.5833 313.092 60.4918ZM1953.98 39.7154C1934.38 26.0967 1904.35 35.3982 1886.91 60.4895C1869.47 85.5816 1871.22 116.966 1890.82 130.585C1910.41 144.203 1940.44 134.902 1957.88 109.81C1975.32 84.7186 1973.57 53.3345 1953.98 39.7154Z"
+                fill="var(--logoColor)" />
 
-<div class="eyebrow">Yakınlarınız ile eğlenceli token kartlar oluşturun</div>
-    <h1 class="hero-title">Vorx</h1>
-    <p class="hero-sub">Harika bir şeylerin üzerinde çalışıyoruz. Yayınlanmasına kalan süre:</p>
-</svg>
+            <div class="eyebrow">Yakınlarınız ile eğlenceli token kartlar oluşturun</div>
+            <h1 class="hero-title">Vorx</h1>
+            <p class="hero-sub">Harika bir şeylerin üzerinde çalışıyoruz. Yayınlanmasına kalan süre:</p>
+        </svg>
 
         <div class="countdown">
             <div class="cd-block">
@@ -504,58 +519,58 @@ fill="var(--logoColor)"/>
         </div>
     </main>
 
-    <form id="newsletter-form " class="cta ">
-        <h2>İlk siz öğrenin</h2>
-        <p>Gelişmelerden haberdar olmak için e-posta adresinizi bırakın.</p>
-        <span id="message "></span>
-        <br>
-        <div class="email-form ">
-            <input type="email " id="email " placeholder="E-posta adresiniz " required>
-            <button type="submit ">Bildir</button>
-        </div>
-    </form>
+    <form id=" newsletter-form " class=" cta">
+            <h2>İlk siz öğrenin</h2>
+            <p>Gelişmelerden haberdar olmak için e-posta adresinizi bırakın.</p>
+            <span id="message"></span>
+            <br>
+            <div class=" email-form ">
+                <input type="email" id="email" placeholder="E-posta adresiniz" required>
+                <button type="submit">Bildir</button>
+            </div>
+            </form>
 
-    <script>
-        // Sayaç kodları
-        const launch = new Date('2026-05-30T12:00:00Z');
-        const p = n => String(n).padStart(2, '0');
+            <script>
+                // Sayaç kodları
+                const launch = new Date('2026-05-30T12:00:00Z');
+                const p = n => String(n).padStart(2, '0');
 
-        function tick() {
-            const diff = launch - Date.now();
-            if (diff <= 0) return;
-            document.getElementById('d').textContent = p(Math.floor(diff / 86400000));
-            document.getElementById('h').textContent = p(Math.floor((diff % 86400000) / 3600000));
-            document.getElementById('m').textContent = p(Math.floor((diff % 3600000) / 60000));
-            document.getElementById('s').textContent = p(Math.floor((diff % 60000) / 1000));
-        }
-        setInterval(tick, 1000);
-        tick();
+                function tick() {
+                    const diff = launch - Date.now();
+                    if (diff <= 0) return;
+                    document.getElementById('d').textContent = p(Math.floor(diff / 86400000));
+                    document.getElementById('h').textContent = p(Math.floor((diff % 86400000) / 3600000));
+                    document.getElementById('m').textContent = p(Math.floor((diff % 3600000) / 60000));
+                    document.getElementById('s').textContent = p(Math.floor((diff % 60000) / 1000));
+                }
+                setInterval(tick, 1000);
+                tick();
 
-        // Form Gönderme
-        const form = document.getElementById("newsletter-form ");
-        form.addEventListener("submit ", async(e) => {
-            e.preventDefault();
-            const email = document.getElementById("email ").value;
-            const messageEl = document.getElementById("message ");
+                // Form Gönderme
+                const form = document.getElementById("newsletter-form");
+                form.addEventListener("submit", async (e) => {
+                    e.preventDefault();
+                    const email = document.getElementById("email").value;
+                    const messageEl = document.getElementById("message");
 
-            try {
+                    try {
 
-                const res = await fetch("https://vorx-app-site-1.onrender.com/api/subscribe ", {
-                    method: "POST ",
-                    headers: {
-                        "Content-Type ": "application/json "
-                    },
-                    body: JSON.stringify({
-                        email
-                    }),
+                        const res = await fetch("https://vorx-app-site-1.onrender.com/api/subscribe", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify({
+                                email
+                            }),
+                        });
+                        const data = await res.json();
+                        messageEl.innerText = data.message;
+                    } catch (err) {
+                        messageEl.innerText = "Hata oluştu.";
+                    }
                 });
-                const data = await res.json();
-                messageEl.innerText = data.message;
-            } catch (err) {
-                messageEl.innerText = "Hata oluştu. ";
-            }
-        });
-    </script>
+            </script>
 </body>
 
 
