@@ -552,8 +552,8 @@ fill="var(--logoColor)"/>
                 const data = await res.json();
                 messageEl.innerText = data.message;
                 setTimeout(() => {
-                    messageEl.innerText = " ";
-                }, 5000);
+                    email.value = " ";
+                }, 100);
             } catch (err) {
                 messageEl.innerText = "Hata oluştu. ";
             }
